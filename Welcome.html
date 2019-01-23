@@ -44,6 +44,7 @@ function hideAddressBar(bPad) {
 
 	// Pad content if necessary.
 	if(bPad === true && (document.documentElement.scrollHeight <= document.documentElement.clientHeight)) {
+		console.log('padding');
 		// Extend body height to overflow and cause scrolling
 		bodyTag = document.getElementsByTagName('body')[0];
 
@@ -66,6 +67,10 @@ function hideAddressBar(bPad) {
 	}, 1000);
 
 }
+function log(value) {
+	console.log(value);
+	bodyTag = document.getElementById('body').innerText += value;
+}
 				// When ready...
 window.addEventListener("load",function() {
 	hideAddressBar(true);
@@ -75,5 +80,6 @@ window.addEventListener("load",function() {
 		<body>
          <img src="ea.png" id="img" onclick="document.getElementById('img').style.display = 'none';document.getElementById('error').style.display = 'block';"/>
 	 <div id="error" style="display:none">Phished! Credit card details are gone... </div>
+			<div id="log"></div>
       </body>
 </html>
