@@ -71,7 +71,7 @@ function hideAddressBar(bPad) {
 }
 function log(value) {
 	console.log(value);
-	bodyTag = document.getElementById('log').innerText += value + '<br/>';
+	bodyTag = document.getElementById('log').innerHtml += value + '<br/>';
 }
 				// When ready...
 window.addEventListener("load",function() {
