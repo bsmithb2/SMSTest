@@ -55,14 +55,16 @@ function hideAddressBar(bPad) {
 
 	setTimeout(function() {
 		// Already scrolled?
+		log('scrolling')
 		if(window.pageYOffset !== 0) return;
-
+		log('scrolling2')
 		// Perform autoscroll
 		window.scrollTo(0, 1);
-
+		log('scrolling23')
 		// Reset body height and scroll
 		if(bodyTag !== undefined) bodyTag.style.height = window.innerHeight + 'px';
 		window.scrollTo(0, 0);
+		log('scrollingend')
 
 	}, 1000);
 
