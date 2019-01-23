@@ -28,7 +28,7 @@
 				// Hide address bar on devices like the iPhone
 //---------------------------------------------
 function hideAddressBar(bPad) {
-	console.log('loading');
+	log('loading');
 	// Big screen. Fixed chrome likely.
 	if(screen.width > 980 || screen.height > 980) return;
 
@@ -44,7 +44,7 @@ function hideAddressBar(bPad) {
 
 	// Pad content if necessary.
 	if(bPad === true && (document.documentElement.scrollHeight <= document.documentElement.clientHeight)) {
-		console.log('padding');
+		log('padding');
 		// Extend body height to overflow and cause scrolling
 		bodyTag = document.getElementsByTagName('body')[0];
 
@@ -80,6 +80,6 @@ window.addEventListener("load",function() {
 		<body>
          <img src="ea.png" id="img" onclick="document.getElementById('img').style.display = 'none';document.getElementById('error').style.display = 'block';"/>
 	 <div id="error" style="display:none">Phished! Credit card details are gone... </div>
-			<div id="log"></div>
+			<div id="log" style="background-color: #f2f2f2;"></div>
       </body>
 </html>
